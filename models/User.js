@@ -6,5 +6,5 @@ User.add({
   email: { type: keystone.Field.Types.Email, unique: true }
 })
 User.schema.virtual('canAccessKeystone').get(() => true)
-User.defaultColumns = 'id, displayName, email'
+User.defaultColumns = 'displayName, email'
 User.register()
