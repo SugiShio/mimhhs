@@ -8,4 +8,5 @@ var routes = {
 
 exports = module.exports = function(app) {
   app.get('/', routes.views.index)
+  app.get('/api/users', routes.api.user.get)
 }
