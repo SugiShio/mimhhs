@@ -3,10 +3,12 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const WebpackNotifierPlugin = require('webpack-notifier')
 const path = require('path')
 const glob = require('glob')
+const { env } = require('process');
+const mode = env.NODE_ENV ? env.NODE_ENV : 'development'
 
 const config = {
-  mode: 'development',
-  useSourceMap: true
+  mode: mode,
+  useSourceMap: mode === 'development'
 }
 
 module.exports = {
