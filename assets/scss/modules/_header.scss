@@ -1,0 +1,31 @@
+.m-header {
+  color: #fff;
+  transition: .5s cubic-bezier(0, .4, .5, 1);
+  &.vartical {
+    width: 40.1vh;
+    height: 100%;
+    padding: 100px 30px 0;
+    background: linear-gradient(-73.2deg, $color-fujiiro, $color-shioniro);
+  }
+
+  &.horizon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 30.3vw;
+    padding: 0 50px;
+    background: linear-gradient(-16.8deg, $color-fujiiro, $color-shioniro);
+  }
+
+  &__title {
+    &.vartical {
+      width: 130px;
+      height: 26px;
+    }
+    &.horizon {
+      width: 240px;
+      height: 48px;
+    }
+  }
+}

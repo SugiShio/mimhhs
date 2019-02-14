@@ -1,7 +1,9 @@
 <template lang="pug">
   <ul>
     <li v-for='article in articles'>
-      {{ article.title }}
+      <router-link :to='"/articles/"+article._id'>
+        {{ article.title }}
+      </router-link>
     </li>
   </ul>
 </template>

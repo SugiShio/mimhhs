@@ -98,5 +98,10 @@ module.exports = {
     alias: {
       vue$: 'vue/dist/vue.common.js'
     }
+  },
+  devServer: {
+    historyApiFallback: {
+      index: 'index.html'
+    }
   }
 }

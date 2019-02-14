@@ -3,13 +3,17 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import index from './pages/index.vue'
+import articleShow from './pages/articles/show.vue'
 
-const routes = [{ path: '/', component: index }, { path: '*', redirect: '/' }]
+const routes = [
+  { name: 'index', path: '/', component: index },
+  { name: 'articles/show', path: '/articles/:id', component: articleShow },
+  { path: '*', redirect: '/' }
+]
 
 export default new VueRouter({
   routes,
   mode: 'history',
-  base: location.pathname,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition

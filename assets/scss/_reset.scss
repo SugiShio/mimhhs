@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 html {
-    font-family: $font-sansserif;
+    font-family: $font-default;
     font-size: $font-md;
     font-weight: 400;
     font-style: normal;
@@ -30,7 +30,7 @@ form, label, legend,
 article,
 footer, header, main,
 menu, nav, section, summary, figure {
-    font-family: $font-sansserif;
+    font-family: $font-default;
     font-size: $font-md;
     font-weight: 400;
     font-style: normal;

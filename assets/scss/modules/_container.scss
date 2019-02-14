@@ -1,0 +1,16 @@
+.m-container {
+  display: flex;
+  min-height: 100vh;
+
+  &.horizon {
+    flex-direction: column;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 100px 50px 20px;
+  }
+}

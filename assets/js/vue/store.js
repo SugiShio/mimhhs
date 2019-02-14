@@ -10,14 +10,21 @@ import * as Constants from './constants.js'
 
 export default new Vuex.Store({
   state: {
+    currentView: '',
     articles: []
   },
   mutations: {
+    setCurrentView(state, payload) {
+      state.currentView = payload.currentView
+    },
     setArticles(state, payload) {
       state.articles = payload.articles
     }
   },
   getters: {
+    getCurrentView: state => {
+      return state.currentView
+    },
     getArticles: state => {
       return state.articles
     }
@@ -32,6 +39,9 @@ export default new Vuex.Store({
         .then(data => {
           commit('setArticles', { articles: data })
         })
+    },
+    updateCurrentView({ commit }, payload) {
+      commit('setCurrentView', payload)
     }
   }
 })
