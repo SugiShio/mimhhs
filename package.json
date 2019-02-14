@@ -1,0 +1,16 @@
+{
+  "name": "mimhhs_keystone",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "keystone": "^4.0.0",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "prettier": "1.15.3"
+  }
+}
