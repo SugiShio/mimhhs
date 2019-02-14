@@ -10,5 +10,8 @@ keystone.init({
   'view engine': 'pug'
 })
 keystone.set('routes', require('./routes'))
+keystone.set('cors allow origin', true)
+keystone.set('cors allow methods', true)
+keystone.set('cors allow headers', true)
 keystone.import('models')
 keystone.start()

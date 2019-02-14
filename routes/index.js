@@ -8,5 +8,5 @@ var routes = {
 
 exports = module.exports = function(app) {
   app.get('/', routes.views.index)
-  app.get('/api/users', routes.api.user.get)
+  app.get('/api/users', keystone.middleware.cors, routes.api.user.get)
 }
