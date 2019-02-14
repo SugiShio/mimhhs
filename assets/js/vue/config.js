@@ -4,3 +4,13 @@ export const LAYOUT_STYLE = {
     horizon: true
   }
 }
+export const MENU_ITEMS = [
+  {
+    name: 'Top',
+    routeName: 'index'
+  },
+  {
+    name: 'Articles',
+    routeName: 'articles'
+  }
+]

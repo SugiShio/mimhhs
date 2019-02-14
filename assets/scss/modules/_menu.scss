@@ -1,0 +1,40 @@
+.m-menu {
+  &.horizon {
+    margin-top: 20px;
+  }
+
+  &.vertical {
+    margin-top: 50px;
+  }
+
+  &__list {
+    &.horizon {
+      display: flex;
+    }
+  }
+
+  &__item {
+    a {
+      @include link(#fff);
+    }
+    span {
+      position: relative;
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        content: '';
+      }
+    }
+    &.horizon {
+      margin-right: 20px;
+    }
+    &.vertical {
+      margin-bottom: 5px;
+    }
+  }
+}

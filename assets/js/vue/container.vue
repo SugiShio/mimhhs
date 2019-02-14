@@ -7,6 +7,7 @@
           <img src="../../images/logo_white.svg" alt="mimhhs" scale="0">
         </router-link>
       </h1>
+      <m-menu></m-menu>
     </header>
   </div>
 
@@ -22,8 +23,12 @@
 </template>
 
 <script>
+import menu from './modules/menu.vue'
 import * as Config from './config.js'
 export default {
+  components: {
+    mMenu: menu
+  },
   computed: {
     currentView() {
       return this.$store.getters.getCurrentView
@@ -31,7 +36,7 @@ export default {
     className() {
       let className = []
       if (!Config.LAYOUT_STYLE[this.currentView]) {
-        className.push('vartical')
+        className.push('vertical')
       } else {
         Object.keys(Config.LAYOUT_STYLE[this.currentView]).forEach(key => {
           className.push(key)
