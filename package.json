@@ -5,7 +5,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "keystone": "^4.0.0",
