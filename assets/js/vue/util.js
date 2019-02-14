@@ -31,7 +31,6 @@ export default class Util {
       })
       .then(data => {
         return data
-        return Promise.resolve(data)
       })
   }
 
