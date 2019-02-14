@@ -1,0 +1,33 @@
+.title {
+  color: $color-shioniro;
+  font-size: 18px;
+}
+
+.m-articleList {
+  margin-top: 20px;
+
+  &__item {
+    & + & {
+      margin-top: 15px;
+    }
+  }
+
+  &__link {
+    @include link;
+    display: inline-flex;
+    color: $color-kuro;
+  }
+
+  &__date {
+    display: inline-block;
+    min-width: 75px;
+    color: $color-fujiiro;
+    font-family: $font-number;
+    letter-spacing: .05em;
+  }
+
+  &__title {
+    flex: 1;
+    margin-left: 5px;
+  }
+}

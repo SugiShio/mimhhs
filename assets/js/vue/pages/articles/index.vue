@@ -2,12 +2,11 @@
   <div>
     <h2>Articles</h2>
     <article-list :items='articles'></article-list>
-    <router-link to='/articles/'>more</router-link>
   </div>
 </template>
 <script>
-import Util from '../util.js'
-import articleList from '../modules/articleList.vue'
+import Util from '../../util.js'
+import articleList from '../../modules/articleList.vue'
 export default {
   data() {
     return {
@@ -18,7 +17,7 @@ export default {
     articleList: articleList
   },
   mounted() {
-    Util.fetchItems('articles', { limit: 5 }).then(data => {
+    Util.fetchItems('articles').then(data => {
       this.articles = data
     })
   }

@@ -1,12 +1,32 @@
 @charset 'utf-8';
 
 @mixin sp {
-    @media (max-width: ($bp-sp)) {
-        @content;
-    }
+  @media (max-width: ($bp-sp)) {
+    @content;
+  }
 }
 @mixin pc {
-    @media (min-width: ($bp-sp+1)) {
-        @content;
-    }
+  @media (min-width: ($bp-sp+1)) {
+    @content;
+  }
+}
+
+@mixin link($color: $color-usuzumi) {
+  position: relative;
+  cursor: pointer;
+  color: $color;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    content: '';
+    transition: .25s;
+    background: $color;
+  }
+  &:hover::before {
+    width: 100%;
+  }
 }
