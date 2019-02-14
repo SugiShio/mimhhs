@@ -1,8 +1,8 @@
 <template lang="pug">
   <div>
-    <h2>Articles</h2>
+    <h2 class='m-main__title'>Articles</h2>
     <article-list :items='articles'></article-list>
-    <router-link to='/articles/'>more</router-link>
+    <router-link to='/articles/' class='m-main__link' >more</router-link>
   </div>
 </template>
 <script>

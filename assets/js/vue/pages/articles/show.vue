@@ -1,7 +1,8 @@
 <template lang="pug">
-  <article>
-    <h2>{{ article.title }}</h2>
-    <div v-html='article.body'></div>
+  <article class='m-article'>
+    <h2 class='m-article__title'>{{ article.title }}</h2>
+    <time class='m-article__time'>{{ time }}</time>
+    <div class='m-article__content' v-html='article.body'></div>
   </article>
 </template>
 <script>
@@ -15,6 +16,12 @@ export default {
   computed: {
     id() {
       return this.$route.params.id
+    },
+    time() {
+      const time = this.article.publishedAt
+        ? this.article.publishedAt
+        : this.article.createdAt
+      return Util.formatDatetime(time)
     }
   },
   mounted() {
@@ -24,5 +31,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped></style>

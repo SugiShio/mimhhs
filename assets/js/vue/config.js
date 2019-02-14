@@ -14,3 +14,4 @@ export const MENU_ITEMS = [
     routeName: 'articles'
   }
 ]
+export const FORMAT_DATETIME = 'Y.M.D H:mm:ss'

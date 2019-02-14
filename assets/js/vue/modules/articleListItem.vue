@@ -13,7 +13,7 @@ export default {
   },
   computed: {
     createdAt() {
-      return Util.formatDatetime(this.item.createdAt)
+      return Util.formatDatetime(this.item.createdAt, 'Y.M.D')
     },
     url() {
       return '/articles/' + this.item._id

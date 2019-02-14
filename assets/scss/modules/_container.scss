@@ -11,6 +11,18 @@
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
-    padding: 100px 50px 20px;
+  }
+}
+
+.m-main {
+  padding: 100px 50px 20px;
+
+  &__title {
+    font-size: $font-lg;
+    color: $color-shioniro;
+  }
+
+  &__link {
+    @include link();
   }
 }

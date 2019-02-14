@@ -1,6 +1,6 @@
 <template lang="pug">
   <div>
-    <h2>Articles</h2>
+    <h2 class='m-main__title'>Articles</h2>
     <article-list :items='articles'></article-list>
   </div>
 </template>

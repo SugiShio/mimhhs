@@ -18,6 +18,7 @@ module.exports = function(req, res) {
             id: data._id,
             updatedAt: data.updatedAt,
             createdAt: data.createdAt,
+            publishedAt: data.publishedAt,
             category: category,
             title: data.title,
             published: data.published,

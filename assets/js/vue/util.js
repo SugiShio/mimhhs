@@ -1,14 +1,9 @@
 import * as Config from './config.js'
+import moment from 'moment'
 export default class Util {
-  static formatDatetime(str) {
-    const date = new Date(str)
-    const y = date.getFullYear()
-    const m = date.getMonth() + 1
-    const d = date.getDate()
-
-    if (isNaN(y) || isNaN(m) || isNaN(d)) return ''
-
-    return y + '.' + m + '.' + d
+  static formatDatetime(dt, format = Config.FORMAT_DATETIME) {
+    const dateTime = moment(dt)
+    return dateTime.format(format)
   }
 
   static fetchItems(contentType, queries) {
