@@ -1,1 +1,1 @@
-require('./vue.js')
+require('./vue')

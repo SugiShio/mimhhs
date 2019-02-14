@@ -9,4 +9,5 @@ var routes = {
 exports = module.exports = function(app) {
   app.get('/', routes.views.index)
   app.get('/api/users', keystone.middleware.cors, routes.api.user.get)
+  app.get('/api/articles', keystone.middleware.cors, routes.api.article.get)
 }
