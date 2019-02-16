@@ -6,6 +6,7 @@
   </transition-group>
 </template>
 <script>
+let $ = require('jquery')
 import articleListItem from './articleListItem.vue'
 export default {
   components: {
