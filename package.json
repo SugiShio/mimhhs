@@ -5,6 +5,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "webpack-dev-server",
+    "watch": "webpack --watch",
     "build": "webpack",
     "heroku-postbuild": "npm run build"
   },
