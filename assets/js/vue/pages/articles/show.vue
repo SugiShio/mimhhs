@@ -2,7 +2,7 @@
   <article class='m-article'>
     <h2 class='m-article__title'>{{ article.title }}</h2>
     <time class='m-article__time'>{{ time }}</time>
-    <div class='m-article__content' v-html='article.body'></div>
+    <div class='m-article__content' v-html='body'></div>
   </article>
 </template>
 <script>
@@ -22,6 +22,9 @@ export default {
         ? this.article.publishedAt
         : this.article.createdAt
       return Util.formatDatetime(time)
+    },
+    body() {
+      return Util.nToBr(this.article.body)
     }
   },
   mounted() {

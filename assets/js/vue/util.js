@@ -6,6 +6,11 @@ export default class Util {
     return dateTime.format(format)
   }
 
+  static nToBr (str) {
+    if(typeof str !== 'string') return
+    return str.replace(/>\n</g, '><').replace(/\n/g, '<br>')
+  }
+
   static fetchItems(contentType, queries) {
     const url = this.fetchUrl(Config.ENDPOINT_BASE + contentType, queries)
     return fetch(url)
