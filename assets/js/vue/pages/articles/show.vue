@@ -21,7 +21,7 @@ export default {
       const time = this.article.publishedAt
         ? this.article.publishedAt
         : this.article.createdAt
-      return Util.formatDatetime(time)
+      return Util.formatDatetime(time, 'Y.M.D H:mm')
     },
     body() {
       return Util.nToBr(this.article.body)

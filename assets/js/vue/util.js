@@ -2,6 +2,7 @@ import * as Config from './config.js'
 import moment from 'moment'
 export default class Util {
   static formatDatetime(dt, format = Config.FORMAT_DATETIME) {
+    if(!dt) return
     const dateTime = moment(dt)
     return dateTime.format(format)
   }
