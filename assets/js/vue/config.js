@@ -1,6 +1,4 @@
-const { env } = require('process');
-export const ENDPOINT_BASE = '/api/'
-// export const ENDPOINT_BASE = 'http://localhost:3000/api/'
+export const ENDPOINT_BASE = process.env.NODE_ENV==='production' ? '/api/' : 'http://localhost:3000/api/'
 export const LAYOUT_STYLE = {
   index: {
     horizon: true
