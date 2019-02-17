@@ -7,7 +7,7 @@ module.exports = function(req, res) {
       res.json(error)
     } else {
       Article.model
-        .find({}, 'id title createdAt')
+        .find({}, 'id title createdAt publishedAt')
         .sort({ createdAt: 'desc' })
         .skip(offset)
         .limit(limit)
