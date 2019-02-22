@@ -20,4 +20,5 @@ exports = module.exports = function(app) {
     keystone.middleware.cors,
     routes.api.article.show
   )
+  app.get('/api/profile', keystone.middleware.cors, routes.api.profile.show)
 }
