@@ -1,8 +1,9 @@
 @charset 'utf-8';
 @import url('https://fonts.googleapis.com/css?family=Neuton|EB+Garamond|Inconsolata');
-@import 'variables';
-@import 'mixin';
-@import 'reset';
+@import '_variables';
+@import '_mixin';
+@import '_reset';
+@import '_fonts';
 @import 'modules/_markdown';
 
 @import 'modules/_article';
@@ -12,3 +13,16 @@
 @import 'modules/_header';
 @import 'modules/_menu';
 @import 'modules/_profile';
+
+[class^='icon-'],
+[class*=' icon-'] {
+  font-size: 1.3em;
+  &::before {
+    vertical-align: middle;
+  }
+  &.mono {
+    width: 1.2em;
+    display: inline-block;
+    text-align: center;
+  }
+}

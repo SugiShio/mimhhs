@@ -7,7 +7,8 @@
     "start": "webpack-dev-server",
     "watch": "webpack --watch",
     "build": "webpack",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "icon-font": "./node_modules/icon-font-generator/bin/icon-font-generator assets/icons/*.svg -o public/fonts/ --html false -j false --csspath assets/scss/_fonts.scss"
   },
   "dependencies": {
     "keystone": "^4.0.0",
@@ -21,7 +22,7 @@
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
-    "icon-font-generator": "^2.1.8",
+    "icon-font-generator": "^2.1.10",
     "jquery": "^3.3.1",
     "moment": "^2.23.0",
     "node-sass": "^4.8.3",

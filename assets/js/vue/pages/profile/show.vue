@@ -6,13 +6,22 @@
       <div class='m-profile__content' v-html='profile'></div>
       <ul>
         <li v-if='github'>
-          <a class="m-main__link" target="_blank" :href='"https://github.com/"+github'>{{ github }}</a>
+          <a class="m-main__link" target="_blank" :href='"https://github.com/"+github'>
+            <i class="icon-github mono"></i>
+            {{ github }}
+          </a>
         </li>
         <li v-if='twitter'>
-          <a class="m-main__link" target="_blank" :href='"https://twitter.com/"+twitter'>{{ twitter }}</a>
+          <a class="m-main__link" target="_blank" :href='"https://twitter.com/"+twitter'>
+            <i class="icon-twitter mono"></i>
+            {{ twitter }}
+          </a>
         </li>
         <li v-if='facebook'>
-          <a class="m-main__link" target="_blank" :href='"https://www.facebook.com/"+facebook'>{{ facebook }}</a>
+          <a class="m-main__link" target="_blank" :href='"https://www.facebook.com/"+facebook'>
+            <i class="icon-facebook mono"></i>
+            {{ facebook }}
+          </a>
         </li>
       </ul>
     </section>
