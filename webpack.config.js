@@ -3,7 +3,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const WebpackNotifierPlugin = require('webpack-notifier')
 const path = require('path')
 const glob = require('glob')
-const { env } = require('process');
+const { env } = require('process')
 const mode = env.NODE_ENV ? env.NODE_ENV : 'development'
 
 const config = {
@@ -49,7 +49,7 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|jpg|gif|svg|ttc|ttf)$/,
+        test: /\.(png|jpg|jpeg|gif|svg|eot|ttf|woff|woff2)$/i,
         use: [
           {
             loader: 'url-loader',

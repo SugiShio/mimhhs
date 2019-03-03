@@ -5,11 +5,13 @@ Vue.use(VueRouter)
 import index from './pages/index.vue'
 import articleIndex from './pages/articles/index.vue'
 import articleShow from './pages/articles/show.vue'
+import profile from './pages/profile/show.vue'
 
 const routes = [
   { name: 'index', path: '/', component: index },
   { name: 'articles', path: '/articles', component: articleIndex },
   { name: 'articles/show', path: '/articles/:id', component: articleShow },
+  { name: 'profile', path: '/profile', component: profile },
   { path: '*', redirect: '/' }
 ]
 

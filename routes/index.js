@@ -11,6 +11,7 @@ exports = module.exports = function(app) {
   app.get('/', routes.views.index)
   app.get('/articles', routes.views.index)
   app.get('/articles/:id', routes.views.index)
+  app.get('/profile', routes.views.index)
 
   // api
   app.get('/api/users', keystone.middleware.cors, routes.api.user.get)
@@ -20,4 +21,5 @@ exports = module.exports = function(app) {
     keystone.middleware.cors,
     routes.api.article.show
   )
+  app.get('/api/profile', keystone.middleware.cors, routes.api.profile.show)
 }
