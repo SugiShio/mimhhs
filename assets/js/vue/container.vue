@@ -12,7 +12,7 @@
     </header>
   </div>
 
-  <div class="m-container__body">
+  <div class="m-container__body" :class="className">
     <main class="m-main">
       <router-view></router-view>
     </main>
