@@ -1,8 +1,10 @@
 .m-container {
-  display: flex;
   min-height: 100vh;
+  @include pc {
+    display: flex;
+  }
 
-  &.horizon {
+  &.top {
     flex-direction: column;
   }
 
@@ -11,6 +13,11 @@
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
+    &.vertical {
+      @include pc {
+        margin-left: 40.1vh;
+      }
+    }
   }
 }
 

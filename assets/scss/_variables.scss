@@ -16,11 +16,19 @@ $font-md: 14px;
 
 /* font families
 ------------------*/
-$font-default: 'EB Garamond', 'ヒラギノ明朝 ProN W3', 'HiraMinProN-W3', 'HG明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
-$font-sansserif: 'Open Sans', '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
-$font-number: 'Neuton', 'ヒラギノ明朝 ProN W3', 'HiraMinProN-W3', 'HG明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
+$font-default: 'EB Garamond', 'ヒラギノ明朝 ProN W3', 'HiraMinProN-W3',
+  'HG明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
+$font-sansserif: 'Open Sans', '游ゴシック体', 'Yu Gothic', YuGothic,
+  'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo',
+  sans-serif;
+$font-number: 'Neuton', 'ヒラギノ明朝 ProN W3', 'HiraMinProN-W3', 'HG明朝E',
+  'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
 
 /* break points
 ------------------*/
 $bp-sp: 600px;
 $bp-tb: 960px;
+
+/* z-index
+------------------*/
+$z-index-header: 20;
