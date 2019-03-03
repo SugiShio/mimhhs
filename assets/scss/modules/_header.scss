@@ -5,6 +5,17 @@
     height: 100%;
     padding: 100px 30px 0;
     background: linear-gradient(-73.2deg, $color-fujiiro, $color-shioniro);
+
+    @include sp {
+      position: fixed;
+      z-index: $z-index-header;
+      transition: 0.5s cubic-bezier(0, 0.4, 0.5, 1);
+      transform: translateX(-100%);
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
   }
 
   &.top {
@@ -56,6 +67,57 @@
         max-width: 30.3vw;
         height: 48px;
         margin: 0;
+      }
+    }
+  }
+
+  &__trigger {
+    &.vertical {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      transition: transform 0.8s;
+      transform: translateX(100%);
+
+      @include pc {
+        display: none;
+      }
+
+      > span {
+        width: 1px;
+        height: 25px;
+        transform: rotate(30deg);
+        transform-origin: bottom;
+        background-color: $color-sumi;
+
+        & + span {
+          margin-left: 8px;
+        }
+      }
+
+      &.open {
+        transform: translateX(0);
+        background-color: transparent;
+
+        > span {
+          background-color: #fff;
+
+          &:nth-child(2) {
+            margin-left: 12px;
+            transition: 0.5s 0.3s;
+            transform: rotate(-30deg);
+          }
+
+          &:nth-child(3) {
+            transition: 0.5s;
+            opacity: 0;
+          }
+        }
       }
     }
   }

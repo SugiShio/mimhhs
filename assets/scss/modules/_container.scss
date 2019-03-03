@@ -1,6 +1,8 @@
 .m-container {
-  display: flex;
   min-height: 100vh;
+  @include pc {
+    display: flex;
+  }
 
   &.top {
     flex-direction: column;
